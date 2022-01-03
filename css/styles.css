@@ -203,7 +203,7 @@ a {
   font-size: 1.8rem;
   font-weight: 600;
   margin: 1rem 0;
-  padding: 2rem;
+  padding: 2rem 3rem;
   text-align: center;
   text-transform: uppercase;
   white-space: nowrap;
@@ -224,7 +224,7 @@ a {
 }
 
 .btn--secondary:hover {
-  background: #00c8eb;
+  background: #05cdf0;
 }
 
 .btn--accent {
@@ -247,6 +247,11 @@ a {
   color: #fff;
 }
 
+.btn--stretched {
+  padding-left: 6rem;
+  padding-right: 6rem;
+}
+
 .btn--block {
   display: inline-block;
   width: 100%;
@@ -266,7 +271,7 @@ a {
   color: var(--color-headings);
   font-size: 2rem;
   outline: 0;
-  padding: 1rem 3.5rem;
+  padding: 1.5rem 3.5rem;
 }
 
 ::placeholder {
@@ -279,14 +284,14 @@ a {
   display: flex;
 }
 
-.input-group .btn {
-  margin: 4px;
-}
-
 .input-group .input {
   border: 0;
   flex-grow: 1;
   padding: 1.5rem 1rem;
+}
+
+.input-group .btn {
+  margin: 4px;
 }
 
 @media screen and (min-width: 1024) {
@@ -379,7 +384,7 @@ a {
     font-size: 1.6rem;
   }
 
-  .plan__descrition {
+  .plan__description {
     font-size: 1.7rem;
   }
 }
@@ -457,7 +462,7 @@ a {
 
 @media screen and (min-width: 768px) {
   .grid--1x2 {
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
@@ -474,6 +479,7 @@ a {
 
 .testimonial__image {
   position: relative;
+  margin: 0 3rem;
 }
 
 .testimonial__image > img {
@@ -487,6 +493,10 @@ a {
 }
 
 @media screen and (min-width: 768px) {
+  .testimonial__image {
+    margin: 0;
+  }
+
   .testimonial .quote,
   .testimonial .quote__author {
     font-size: 2.4rem;
@@ -494,5 +504,48 @@ a {
 
   .testimonial .quote {
     margin-left: 6rem;
+    margin-right: 0;
+  }
+}
+
+/* Callouts */
+
+.callout {
+  border-radius: 5px;
+  padding: 4rem;
+}
+
+.callout--primary {
+  background: var(--color-primary);
+  color: #fff;
+}
+
+.callout__heading {
+  color: #fff;
+  margin-top: 0;
+  font-size: 3rem;
+}
+
+.callout .btn {
+  justify-self: center;
+  align-self: center;
+}
+
+.callout__content {
+  text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+  .callout .grid--1x2 {
+    grid-template-columns: 1fr auto;
+  }
+
+  .callout__content {
+    text-align: left;
+  }
+
+  .callout .btn {
+    justify-self: start;
+    margin: 0 2rem;
   }
 }
